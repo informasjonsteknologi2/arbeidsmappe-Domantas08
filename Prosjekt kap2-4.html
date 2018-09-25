@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+  <title> Prosjekt kapittel 2-4 </title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+//Oppgave A
+var D =20
+var M =09
+var Y=2018
+var C=20
+var K=18
+if (M==1 || M==2) {
+  M +=12;
+  Y-=1;
+}
+
+
+var X = 2.6 * M - 5.39
+
+if (X<0) {
+  X=Math.ceil(X);
+} else {
+  X =Math.floor(X);
+}
+
+Y = Math.floor(K/4)
+var Z = Math.floor(C/4)
+
+S=X+Y+Z+D+K-2*C
+R=S%7
+console.log(R);
+
+
+//Oppgave B
+function dato(D, M ,Y ,C ,K) {
+ if (M==1 || M==2) {
+  M +=12;
+  Y-=1;
+}
+var X = 2.6 * M - 5.39
+
+if (X<0) {
+  X=Math.ceil(X);
+} else {
+  X =Math.floor(X);
+}
+
+Y = Math.floor(K/4)
+var Z = Math.floor(C/4)
+
+S=X+Y+Z+D+K-2*C
+R=S%7
+console.log(R)
+}
+dato(20, 09, 2018, 20, 18)
+
+
+
+//Oppgave c
+
+function dato(D, M ,Y ,C ,K) {
+ if (M==1 || M==2) {
+  M +=12;
+  Y-=1;
+}
+var X = 2.6 * M - 5.39
+
+if (X<0) {
+  X=Math.ceil(X);
+} else {
+  X =Math.floor(X);
+}
+Y = Math.floor(K/4)
+var Z = Math.floor(C/4)
+S=X+Y+Z+D+K-2*C
+R=S%7
+if (R===1) {
+  console.log("Mandag")
+} else if (R==2) {
+  console.log("Tirsdag")
+} else if (R==3) {
+  console.log("Onsdag")
+} else if (R==4) {
+  console.log("Torsdag")
+} else if (R==5) {
+  console.log("Fredag")
+} else if (R==6) {
+  console.log("Lørdag")
+} else if (R==0) {
+  console.log("Søndag")
+}
+}
+
+//Oppgave D
+
+var dato =prompt("Skrive inn dato, dd.mm.yyyy")
+
+var D1 = dato=[0];
+var D2 = dato=[1];
+var M1 = dato=[2];
+var M2 = dato=[3];
+var Y1 = dato=[4];
+var Y2 = dato=[5];
+var Y3 = dato=[6];
+var Y4 = dato=[7];
+
+var D = Number(D1+D2);
+var M = Number(M1+M2);
+var Y = Number(Y1+Y2+Y3+Y4);
+
+var C = Number(Y1+Y2);
+var K = Number(Y3+Y4);
+
+function ukedag (D, M, Y, C, K) {
+  if (M==1 || M==2) {
+   M +=12;
+   Y-=1;
+ }
+ var X = 2.6 * M - 5.39
+
+ if (X<0) {
+   X=Math.ceil(X);
+ } else {
+   X =Math.floor(X);
+ }
+ var Y = Math.floor(K/4)
+ var Z = Math.floor(C/4)
+ var S=X+Y+Z+D+K-2*C
+ var R=S%7
+ console.log(R)
+  if (R===1) {
+   console.log("Mandag")
+ } else if (R==2) {
+   console.log("Tirsdag")
+ } else if (R==3) {
+   console.log("Onsdag")
+ } else if (R==4) {
+   console.log("Torsdag")
+ } else if (R==5) {
+   console.log("Fredag")
+ } else if (R==6) {
+   console.log("Lørdag")
+ } else if (R==0) {
+   console.log("Søndag")
+ }
+}
+ukedag(D,M,Y,C,K)
+</script>
+</body>
+</html>
